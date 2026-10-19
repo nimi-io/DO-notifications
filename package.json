@@ -1,0 +1,24 @@
+{
+  "name": "do-billing-report",
+  "version": "1.0.0",
+  "description": "Weekly DigitalOcean billing report: fetches balance, invoice preview, line items and billing history, then emails a detailed HTML report.",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "do-billing-report": "src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "send-now": "node src/index.js --now",
+    "preview": "node src/index.js --dry-run"
+  },
+  "engines": {
+    "node": ">=18.17"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^18.0.8",
+    "node-cron": "^4.6.0",
+    "resend": "^6.34.1"
+  }
+}
