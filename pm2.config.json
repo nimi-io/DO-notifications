@@ -1,0 +1,21 @@
+{
+  "apps": [
+    {
+      "name": "do-billing-report",
+      "script": "src/index.js",
+      "cwd": ".",
+      "instances": 1,
+      "exec_mode": "fork",
+      "autorestart": true,
+      "max_restarts": 10,
+      "restart_delay": 5000,
+      "max_memory_restart": "200M",
+      "time": true,
+      "out_file": "./logs/out.log",
+      "error_file": "./logs/error.log",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  ]
+}
